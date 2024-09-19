@@ -3,7 +3,7 @@ output "storage_account_id" {
   value       = azurerm_storage_account.storage_account.id
 }
 
-output "storage_account_primary_endpoint" {
-  description = "The primary endpoint of the storage account."
-  value       = azurerm_storage_account.storage_account.primary_blob_endpoint
+output "blob_container_url" {
+  description = "The URL of the blob container."
+  value       = azurerm_storage_container.blob_container.id
 }
