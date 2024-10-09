@@ -18,6 +18,12 @@ module "resource_group" {
   tags         = var.tags
 }
 
+# Generate a random hex for unique storage account name
+resource "random_id" "random_hex" {
+  byte_length = 4
+}
+
+
 # Storage Account
 resource "azurerm_storage_account" "main" {
   name                     = local.storage_account_name
